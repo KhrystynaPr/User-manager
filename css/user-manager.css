@@ -1,0 +1,86 @@
+body {
+    background: darkkhaki;
+}
+
+#name {
+    font-size: 60px;
+    text-align: center;
+}
+
+#work-space {
+    background: #94864c;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#total {
+    font-size: 45px;
+    text-align: center;
+}
+
+.user {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(253, 250, 209);
+    margin: 30px;
+    padding: 10px;
+   }
+
+   ul {
+       padding: 0px;
+   }
+
+.glyphicon-remove  {
+    font-size: 25px;
+    color: rgb(83, 62, 19);
+}
+
+/* .glyphicon-remove:hover {
+    title: 
+} */
+
+.glyphicon-pencil {
+    font-size: 25px;
+    color: rgb(83, 62, 19);
+}
+
+.user-header {
+    width: 100%;
+    height: 10%;
+}
+
+.user-name {
+    float: left;
+}
+
+.user-icons {
+    float: right;
+}
+
+.glyphicon-plus {
+    font-size: 50px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    margin: 0px auto;
+}
+
+.glyphicon-plus:hover {
+    color: rgb(85, 62, 13);
+}
+
+#add-user {
+    display: flex;
+    justify-content: center;
+}
+
+.myModal {
+    display: none;
+   }
+
+.modal {
+    width: 500px;
+    height: 300px;
+    margin: auto;
+}

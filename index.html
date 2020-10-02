@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/user-manager.css">
+</head>
+<body>
+    <div id="name">Users</div>
+    <div id="add-user"><span  class="glyphicon glyphicon-plus" title="add new user" onclick="addUser()"></span></div>
+    <div id="work-space">
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h2>Are you want to delete user?</h2>
+                </div>
+                <div class="modal-body">
+                    <p>The user will be permanently deleted</p>
+                </div>
+                <div class="modal-buttons">
+                    <button>OK</button>
+                    <button>Cancel</button>
+                </div>
+             </div>
+        </div>
+        <div class="user">
+            <div class="user-header">
+                <span class="user-name">User 1</span>
+                <div class = "user-icons">
+                    <span class="glyphicon glyphicon-pencil" title="edit"></span>
+                    <span class="glyphicon glyphicon-remove" title="delete" onclick="showModalDelete()"></span>
+                </div>
+            </div>
+            <div class="user-content"><br>
+                <span>First Name :</span><span> Andrii</span><br>
+                <span>Last Name :</span><span> Pryslupskiy</span><br>
+                <span>Age :</span><span> 25</span><br>
+                <ul>Pets :</ul>  
+                    <li>Pusik</li>
+                    <li>Volohatyi</li>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div id="total">Total</div>
+</body>
+<script src="js/user-manager.js"></script>
+</html>
