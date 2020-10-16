@@ -39,35 +39,49 @@ function getUserFromForm () {
         ]
     }
 }
- let modal = document.getElementById("myModal");
 
 function showModalDelete () {
-    modal.style.display = "block"
+    document.getElementById("myModal").style.display = "block";
 }       
 
-function closeModal (){
-    modal.style.display = "none";
+function showModalEdit() {
+    document.getElementById("edit-user").style.display = "block"
 }
 
-function generateModalDeleteHtml (user) {
-let modalDeleteHtml = `
-<div id="myModal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <h2>Are you want to delete user?</h2>
-            </div>
-            <div class="modal-body">
-                <p>The user will be permanently deleted</p>
-                </div>
-            <div class="modal-buttons">
-            <button>OK</button>
-            <button>Cancel</button>
-            </div>`
-            return modalDeleteHtml;
+function showModalCreate () {
+    document.getElementById("add-user-form").style.display = "block";
+} 
+
+function closeModal () {
+    document.getElementById("myModal").style.display = "none";
 }
 
-function addModalDelete () {
-    let modalDelete = generateModalDeleteHtml ();
-    document.getElementById("work-space").innerHTML += modalDeleteHtml;
+function closeModalEdit () {
+    document.getElementById("edit-user").style.display = "none"
 }
+
+function closeModalCreate () {
+    document.getElementById("add-user-form").style.display = "none";
+}
+// function generateModalDeleteHtml (user) {
+// let modalDeleteHtml = `
+//         <div id="myModal" class="modal">
+//             <div class="modal-content">
+//                 <div class="modal-header">
+//                 <span class="close" onclick="closeModal()">&times;</span>
+//                 <h2>Are you want to delete user?</h2>
+//             </div>
+//             <div class="modal-body">
+//                 <p>The user will be permanently deleted</p>
+//                 </div>
+//             <div class="modal-buttons">
+//             <button>OK</button>
+//             <button>Cancel</button>
+//         </div>`
+//             return modalDeleteHtml;
+// }
+
+// // function addModalDelete () {
+// //     let modalDelete = generateModalDeleteHtml ();
+// //     document.getElementById("work-space").innerHTML += modalDelete;
+// // }

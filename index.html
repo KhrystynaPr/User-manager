@@ -9,8 +9,49 @@
 </head>
 <body>
     <div id="name">Users</div>
-    <div id="add-user"><span  class="glyphicon glyphicon-plus" title="add new user" onclick="addUser()"></span></div>
+    <div id="add-user"><span  class="glyphicon glyphicon-plus" title="add new user" onclick="showModalCreate()"></span></div>
     <div id="work-space">
+        <div>
+            <form id="add-user-form" class="modal-content">
+                <span class="close" onclick="closeModalCreate()">&times;</span>
+                <h1 class="modal-header">Create new user</h1>
+                <h2>To add a new user fill out the following form</h2>
+                    <label for="fname">First name:</label><br>
+                        <input type="text" id="fname" name="fname" value=" "><br>
+                    <label for="lname">Last name:</label><br>
+                        <input type="text" id="lname" name="lname" value=" "><br>
+                    <label for="age">Age:</label><br>
+                        <input type="text" id="age" name="age" value=" "><br>
+                    <label for="pets">Pets:</label><br>
+                        <input type="text" id="pets" name="pets" value=" "><br>
+                        <input type="text" id="pets" name="pets" value=" "><br>
+                    <button onclick="addUser()">
+                        Create user
+                    </button>
+            </form>
+        </div>
+    </div>>
+    <div id="edit-user">
+        <div id="work-space">
+            <form id="edit-user-form" class="modal-content">
+                <span class="close" onclick="closeModalEdit()">&times;</span>
+                <h1 class="modal-header">Edit information about this user</h1>
+                <h2>To edit the information make changes to the appropriate fields of the form</h2>
+                    <label for="fname">First name:</label><br>
+                        <input type="text" id="fname" name="fname" value=" "><br>
+                    <label for="lname">Last name:</label><br>
+                        <input type="text" id="lname" name="lname" value=" "><br>
+                    <label for="age">Age:</label><br>
+                        <input type="text" id="age" name="age" value=" "><br>
+                    <label for="pets">Pets:</label><br>
+                        <input type="text" id="pets" name="pets" value=" "><br>
+                        <input type="text" id="pets" name="pets" value=" "><br>
+                    <button onclick="editUser()">
+                        Save changes
+                    </button>
+            </form>
+        </div>
+    </div>
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <div class="modal-header">
@@ -21,8 +62,8 @@
                     <p>The user will be permanently deleted</p>
                 </div>
                 <div class="modal-buttons">
-                    <button>OK</button>
-                    <button>Cancel</button>
+                    <button id="modal-button-ok">OK</button>
+                    <button id="modal-button-cancel" onclick="closeModal()">Cancel</button>
                 </div>
              </div>
         </div>
@@ -30,7 +71,7 @@
             <div class="user-header">
                 <span class="user-name">User 1</span>
                 <div class = "user-icons">
-                    <span class="glyphicon glyphicon-pencil" title="edit"></span>
+                    <span class="glyphicon glyphicon-pencil" title="edit" onclick="showModalEdit()"></span>
                     <span class="glyphicon glyphicon-remove" title="delete" onclick="showModalDelete()"></span>
                 </div>
             </div>

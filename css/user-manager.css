@@ -36,13 +36,19 @@ body {
     color: rgb(83, 62, 19);
 }
 
-/* .glyphicon-remove:hover {
-    title: 
-} */
+.glyphicon-remove:hover {
+    cursor: pointer; 
+    color: rgb(196, 90, 48);
+}
 
 .glyphicon-pencil {
     font-size: 25px;
     color: rgb(83, 62, 19);
+}
+
+.glyphicon-pencil:hover {
+    cursor: pointer; 
+    color: rgb(196, 90, 48);
 }
 
 .user-header {
@@ -67,7 +73,8 @@ body {
 }
 
 .glyphicon-plus:hover {
-    color: rgb(85, 62, 13);
+    cursor: pointer; 
+    color: rgb(196, 90, 48);
 }
 
 #add-user {
@@ -75,12 +82,29 @@ body {
     justify-content: center;
 }
 
-.myModal {
-    display: none;
-   }
-
 .modal {
     width: 500px;
     height: 300px;
     margin: auto;
+}
+
+#add-user-form {
+    background: azure;
+    text-align: center;
+    padding: 10px;
+    display: none; 
+}
+
+.modal-buttons {
+    text-align: center;
+}
+
+#edit-user {
+    display: none;
+    text-align: center;
+    padding: 10px;
+    background: azure;
+}
+.close {
+    margin: 10px;
 }
