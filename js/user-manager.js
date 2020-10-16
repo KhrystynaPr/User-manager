@@ -45,7 +45,7 @@ function showModalDelete () {
 }       
 
 function showModalEdit() {
-    document.getElementById("edit-user").style.display = "block"
+    document.getElementById("edit-user").style.display = "block";
 }
 
 function showModalCreate () {
@@ -57,7 +57,7 @@ function closeModal () {
 }
 
 function closeModalEdit () {
-    document.getElementById("edit-user").style.display = "none"
+    document.getElementById("edit-user").style.display = "none";
 }
 
 function closeModalCreate () {
