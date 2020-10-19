@@ -1,7 +1,15 @@
-function addUser() {
+function addUser(event) {
+    event.preventDefault()
     let newUser = getUserFromForm();
     let userHtml = generateUserHtml(newUser);
     document.getElementById("work-space").innerHTML += userHtml;
+    closeModalCreate()
+}
+
+function editUser (event) {
+    event.preventDefault()
+
+    closeModalEdit()
 }
 
 function generateUserHtml (user) {
@@ -10,12 +18,12 @@ function generateUserHtml (user) {
     <div class="user-header">
         <span class="user-name">User 1</span>
         <div class = "user-icons">
-            <span class="glyphicon glyphicon-pencil" title="edit"></span>
+            <span class="glyphicon glyphicon-pencil" title="edit" onclick='showModalEdit(event, "` + user.id + `")'></span>
             <span class="glyphicon glyphicon-remove" title="delete" onclick="showModalDelete()"></span>
         </div>
     </div>
     <div class="user-content"><br>
-        <span>First Name :</span><span> ` + user.firstName + `</span><br>
+        <span>First Name :</span><span id="f-name_` + user.id + `"> ` + user.firstName + `</span><br>
         <span>Last Name :</span><span> ` + user.lastName + `</span><br>
         <span>Age :</span><span> ` + user.age + ` </span><br>
         <ul>Pets :</ul>  
@@ -28,9 +36,11 @@ function generateUserHtml (user) {
 }
 
 function getUserFromForm () {
+    const fName = document.getElementById("fname-create").value;
     // add form
     return {
-        "firstName": "Andrii 1",
+        "id": getNextID(),
+        "firstName": fName,
         "lastName": "Pryslupskiy",
         "age": "25",
         "pets": [
@@ -44,8 +54,10 @@ function showModalDelete () {
     document.getElementById("myModal").style.display = "block";
 }       
 
-function showModalEdit() {
-    document.getElementById("edit-user").style.display = "block";
+function showModalEdit(event, userID) {
+    const fName = document.getElementById("f-name_" + userID).textContent;
+    document.getElementById("fname-edit").value = fName;
+    document.getElementById("edit-user-form").style.display = "block";
 }
 
 function showModalCreate () {
@@ -57,31 +69,10 @@ function closeModal () {
 }
 
 function closeModalEdit () {
-    document.getElementById("edit-user").style.display = "none";
+    document.getElementById("edit-user-form").style.display = "none";
 }
 
 function closeModalCreate () {
     document.getElementById("add-user-form").style.display = "none";
 }
-// function generateModalDeleteHtml (user) {
-// let modalDeleteHtml = `
-//         <div id="myModal" class="modal">
-//             <div class="modal-content">
-//                 <div class="modal-header">
-//                 <span class="close" onclick="closeModal()">&times;</span>
-//                 <h2>Are you want to delete user?</h2>
-//             </div>
-//             <div class="modal-body">
-//                 <p>The user will be permanently deleted</p>
-//                 </div>
-//             <div class="modal-buttons">
-//             <button>OK</button>
-//             <button>Cancel</button>
-//         </div>`
-//             return modalDeleteHtml;
-// }
 
-// // function addModalDelete () {
-// //     let modalDelete = generateModalDeleteHtml ();
-// //     document.getElementById("work-space").innerHTML += modalDelete;
-// // }

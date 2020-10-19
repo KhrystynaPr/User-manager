@@ -2,7 +2,7 @@ body {
     background: darkkhaki;
 }
 
-#name {
+#page-name {
     font-size: 60px;
     text-align: center;
 }
@@ -28,7 +28,7 @@ body {
    }
 
    ul {
-       padding: 0px;
+       padding-left: 7px;
    }
 
 .glyphicon-remove  {
@@ -99,7 +99,7 @@ body {
     text-align: center;
 }
 
-#edit-user {
+#edit-user-form {
     display: none;
     text-align: center;
     padding: 10px;
